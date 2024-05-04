@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  background-color: #0a0a23;
+}
+
+#game {
+  max-width: 400px;
+  max-height: 500px;
+  background-color: #ffffff;
+  color: #000000; /* Changed text color to black for better visibility */
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+  font-family: 'Montserrat', sans-serif; /* Applying Montserrat font */
+  border-radius: 10px;
+}
+
+#title {
+  color: #ffffff ;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; /* Applying Montserrat font */
+  margin-top: 20%;
+}
+
+#text {
+  margin-top: 0%;
+  margin-bottom: 0%;
+  text-align: center;
+}
+
+#text-input {
+  width: calc(100% - 100px); /* Subtract the width of the button from the total width of the #game */
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #ffffff;
+  border-bottom: 2px solid purple;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+  text-align: center;
+}
+
+#check-btn {
+  width: 70px; /* Set a fixed width for the button */
+  margin-left: 10px; /* Add some space between the input box and the button */
+  border-radius: 100px; /* Retain the rounded corners for the button */
+  background-color: purple;
+  color: white;
+  padding: 10px;
+  box-shadow: none;
+  cursor: pointer;
+  border: none;
+}
+
+#result {
+  text-align: center;
+  padding:10px;
+  padding-bottom:0px;
+  margin-bottom: 0%;
+}
