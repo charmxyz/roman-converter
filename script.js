@@ -32,6 +32,14 @@ document.addEventListener("DOMContentLoaded", function() {
             output.style.display = "block";
         }
 
+        if (userInput >= 4000) {
+            output.textContent = "Please enter a number less than or equal to 3999";
+            gameContainer.style.backgroundColor = "red";
+            output.style.color = "white";
+            output.style.display = "block";
+            gameContainer.style.display = "block";
+        }
+
         function convertToRoman(num) {
             var roman = "";
             var romanNumList = {
