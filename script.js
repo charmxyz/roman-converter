@@ -1,38 +1,30 @@
-// Function to check if a string is a palindrome
-function isPalindrome(str) {
-    // Convert the string to lowercase and remove non-alphanumeric characters
-    const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
-    // Reverse the string
-    const reversedStr = cleanedStr.split('').reverse().join('');
-    // Check if the cleaned string is equal to its reverse
-    return cleanedStr === reversedStr;
-}
+document.addEventListener("DOMContentLoaded", function() {
+    var numberInput = document.getElementById("number");
+    var output = document.getElementById("output");
+    var gameContainer = document.getElementById("game-container");
+    var game = document.getElementById("game");
+    var convertBtn = document.getElementById("convert-btn");
 
-// Function to handle button click event
-function checkPalindrome() {
-    // Get the user input value
-    const userInput = document.getElementById('text-input').value;
-    // Get the result text element
-    const resultText = document.getElementById('result');
+    convertBtn.addEventListener("click", function() {
+        var userInput = parseInt(numberInput.value);
 
-    // Check if the user has entered anything
-    if (userInput.trim() === "") {
-        resultText.textContent = "Please input a value."; // Display an alert if input is empty
-        resultText.style.color = 'red'; // Optional: Change text color to red for the alert
-    } else {
-        // Check if the input is a palindrome
-        const result = isPalindrome(userInput);
-        resultText.style.color = 'black'; // Reset text color to default
-        // Set the result message based on whether it's a palindrome or not
-        if (result) {
-            resultText.textContent = `"${userInput}" is a palindrome.`; // Include quotation marks around the input
-        } else {
-            resultText.textContent = `"${userInput}" is not a palindrome.`; // Same as above
+        if (userInput <= 0) {
+            output.textContent = "Please enter a number greater than or equal to 1";
+            gameContainer.style.backgroundColor = "red";
+            output.style.display = "block";
+            gameContainer.style.display = "block";
+        } 
+
+        if (userInput === "" || isNaN(userInput)) {
+            output.textContent = "Please enter a valid number";
+            gameContainer.style.backgroundColor = "red";
+            output.style.display = "block";
+            gameContainer.style.display = "block";
+        }   
+
+        if (userInput > 0) {
+            
         }
-    }
-}
 
-// Add event listener to the check button when the document is fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('check-btn').addEventListener('click', checkPalindrome);
+    });
 });

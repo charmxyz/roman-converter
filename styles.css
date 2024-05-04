@@ -15,6 +15,10 @@ body {
   padding: 30px;
   font-family: 'Montserrat', sans-serif; /* Applying Montserrat font */
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #title {
@@ -30,7 +34,7 @@ body {
   text-align: center;
 }
 
-#text-input {
+#number {
   width: calc(100% - 100px); /* Subtract the width of the button from the total width of the #game */
   padding: 10px;
   margin-top: 10px;
@@ -42,21 +46,46 @@ body {
   text-align: center;
 }
 
-#check-btn {
-  width: 70px; /* Set a fixed width for the button */
-  margin-left: 10px; /* Add some space between the input box and the button */
-  border-radius: 100px; /* Retain the rounded corners for the button */
+#convert-btn {
+  width: 450px; 
+  border-radius: 100px; 
   background-color: purple;
   color: white;
-  padding: 10px;
+  padding: 20px;
   box-shadow: none;
   cursor: pointer;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Montserrat', sans-serif; /* Applying Montserrat font */
+  font-size: 16px;
 }
 
-#result {
+#output {
   text-align: center;
-  padding:10px;
   padding-bottom:0px;
   margin-bottom: 0%;
+  display: none;
+  color: #ffffff;
 }
+
+#game-container {
+    max-width: 400px;
+    max-height: 500px;
+    background-color: #ffffff;
+    color: #000000; /* Changed text color to black for better visibility */
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 30px;
+    font-family: 'Montserrat', sans-serif; /* Applying Montserrat font */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
