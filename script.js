@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function() {
             output.textContent = romanNumber;
             gameContainer.style.display = "block";
             output.style.display = "block";
+            output.style.color = "black";
+            gameContainer.style.backgroundColor = "white";
         }
 
         if (userInput >= 4000) {
